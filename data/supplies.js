@@ -2,7 +2,7 @@ const spiralNotebook = {
     id: 'spiralnotebook543',
     name: 'Spiral Notebook',
     image: 'spiral-notebook-product.jpg',
-    description: 'A small A5 blank top spiral notebook',
+    description: 'A small spiral notebook',
     category: 'paper-supplies',
     price: 2.99
 };

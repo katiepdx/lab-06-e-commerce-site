@@ -1,8 +1,19 @@
+.sub-heading {
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #supplies li {
     height: 200px;
     width: 150px;
     border: solid 2px black;
     border-radius: 2px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     background-color: rgb(224, 236, 255);

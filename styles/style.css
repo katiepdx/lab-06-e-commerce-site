@@ -1,7 +1,9 @@
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('../assets/homepage-background.jpg');
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 main {
@@ -15,8 +17,7 @@ main {
 
 .teaching-supplies-button {
     height: 100px;
-    width: 200px;
-    margin-left: 22vw;
+    width: 100%;
     border: 2px black solid;
     display: flex;
     justify-content: center;
@@ -25,8 +26,22 @@ main {
     font-size: larger;
 }
 
+.teaching-supplies-button:hover {
+    background-color: darkorange;
+}
+
+a:link {
+    text-decoration: none;
+    font-size: larger;
+}
+
+a {
+    color: white;
+}
+
+
 section {
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.938);
     width: 1000px;
     max-width: 80%;
     display: flex;
