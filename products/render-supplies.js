@@ -19,6 +19,7 @@ export function renderSupplies(supplies) {
 
     const pElPrice = document.createElement('p');
     pElPrice.classList.add('price');
+    pElPrice.textContent = `$${supplies.price.toFixed(2)}`;
     li.appendChild(pElPrice);
 
     const button = document.createElement('button');
