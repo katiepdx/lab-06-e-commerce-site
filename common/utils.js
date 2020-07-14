@@ -10,3 +10,8 @@ export function findById(catalogItem, cartItemId) {
     return null;
 }
 
+export function calcLineItem(cartItemQuantity, catalogPrice) {
+    let linePrice = cartItemQuantity * catalogPrice;
+    let roundedLinePrice = Math.round(linePrice * 100) / 100;
+    return roundedLinePrice;
+}
