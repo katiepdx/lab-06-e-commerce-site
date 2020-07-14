@@ -1,5 +1,3 @@
-import { supplies } from '../data/supplies.js';
-
 export function renderSupplies(supplies) {
     const li = document.createElement('li');
 
