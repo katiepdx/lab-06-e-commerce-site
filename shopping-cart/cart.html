@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="./cart.css">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <h2>
+                Shopping Cart
+            </h2>
+
+            <content>
+            <p class="sub-heading">
+                Review Items
+            </p>
+            <hr />
+            <p>
+                <!-- List of products IN CART will go here -->
+                <table id="cart-list">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Item Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Items list goes here -->
+                        <tr>
+                            <th>Spiral Notebook</th>
+                            <td>3</td>
+                            <td>2.99</td>
+                            <td>8.97</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td id="order-total" colspan="3">Order Total</td>
+                        <td></td>
+                    </tfoot>
+                </table>
+            </p>
+        
+            <button id="place-order-button">Place Order</button>
+        </section>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="products.js"></script>
+</body>
+
+</html>
