@@ -1,4 +1,4 @@
-const spiralNotebook {
+const spiralNotebook = {
     id: 'spiralnotebook543',
     name: 'Spiral Notebook',
     image: 'spiral-notebook-product.jpg',
@@ -7,7 +7,7 @@ const spiralNotebook {
     price: 2.99
 };
 
-const balloon {
+const balloon = {
     id: 'happyballoon235',
     name: 'Yellow Balloon',
     image: 'balloon-product.jpg',
@@ -16,7 +16,7 @@ const balloon {
     price: 0.25
 };
 
-const colorPencils {
+const colorPencils = {
     id: 'colorpencilsl642',
     name: 'Color Pencils',
     image: 'pencil-product.jpg',
@@ -25,7 +25,7 @@ const colorPencils {
     price: 5.99
 };
 
-const colorPens {
+const colorPens = {
     id: 'colorpensl731',
     name: 'Color Pens',
     image: 'pens-product.jpg',
@@ -34,7 +34,7 @@ const colorPens {
     price: 3.99
 };
 
-const stickyNotes {
+const stickyNotes = {
     id: 'stickynotes437',
     name: 'Sticky Notes',
     image: 'sticky-note-product.jpg',
@@ -43,7 +43,7 @@ const stickyNotes {
     price: 3.99
 };
 
-const supplies = [
+export const supplies = [
     spiralNotebook,
     balloon,
     colorPencils,
@@ -51,4 +51,3 @@ const supplies = [
     stickyNotes
 ];
 
-export default supplies

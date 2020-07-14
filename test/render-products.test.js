@@ -1,13 +1,13 @@
 // IMPORT MODULES under test here:
-import supplies from '../data/supplies.js';
+import { renderSupplies } from '../products/render-supplies.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('render function matches outerHTML', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     // notebook object
-    const spiralNotebook {
+    const spiralNotebook = {
         id: 'spiralnotebook543',
         name: 'Spiral Notebook',
         image: 'spiral-notebook-product.jpg',
@@ -17,13 +17,14 @@ test('time to test a function', (expect) => {
     };
 
     // outerHTML
-    const expected = '<li class="paper-supplies"><h3>Spiral Notebook</h3><img src="../assets/spiral-notebook-product.jpg" alt="image of a spiral notebook"><p>A small A5 blank top spiral notebook</p><p class="price">Price:  <span id="notebook-price"></span></p><button value="spiralnotebook543">Add to Cart</button></li>';
+    const expected = '<li class="paper-supplies"><h3>Spiral Notebook</h3><img src="../assets/spiral-notebook-product.jpg" alt="Spiral Notebook image"><p>A small A5 blank top spiral notebook</p><p class="price"></p><button value="spiralnotebook543">Add to Cart</button></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = false;
+    const DOM = renderSupplies(spiralNotebook);
+    const HTML = DOM.outerHTML;
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(HTML, expected);
 });
