@@ -16,7 +16,6 @@ export function calcLineItemTotal(cartItemQuantity, catalogPrice) {
     return roundedLinePrice;
 }
 
-
 export function calcOrderTotal(itemsInCart, supplies) {
     let orderTotal = 0;
     
@@ -28,5 +27,4 @@ export function calcOrderTotal(itemsInCart, supplies) {
         
     }
     return Math.round(orderTotal * 100) / 100;
-    
 }
