@@ -25,6 +25,8 @@ export function calcOrderTotal(itemsInCart, supplies) {
         const supplyItem = findById(supplies, lineItem.id);
         const lineTotal = calcLineItemTotal(lineItem.quantity, supplyItem.price);
         orderTotal = orderTotal + lineTotal;
+        
     }
-    return orderTotal;
+    return Math.round(orderTotal * 100) / 100;
+    
 }
