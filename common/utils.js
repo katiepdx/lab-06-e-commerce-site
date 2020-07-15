@@ -1,5 +1,6 @@
 export function findById(catalogItem, cartItemId) {
     //Initialize item
+    console.log(catalogItem, cartItemId);
     let itemMatch;
     for (let i = 0; i < catalogItem.length; i++) {
         if (cartItemId === catalogItem[i].id) {
@@ -31,7 +32,7 @@ export function calcOrderTotal(itemsInCart, supplies) {
 
 export function getCart(){
     // retrieves CART from localStorage 
-    const rawCart = localStorage.getItem('CART');
+    const rawCart = localStorage.getItem('UPDATED CART');
     let cart;
 
     if (rawCart) {

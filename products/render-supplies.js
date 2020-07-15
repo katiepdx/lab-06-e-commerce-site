@@ -34,19 +34,22 @@ export function renderSupplies(supplies) {
 
         //getting the id for each item in cart
         let itemsInCart = findById(cart, supplies.id);
+        console.log('Items:', itemsInCart);
 
         //if cart item exists at 1 to quantity
-        if (itemsInCart) {
-            itemsInCart.quantity++;
-            
-        } else {
-            // else create new item object and initialize it to 1
-            const newCartItem = {
-                id: cart.id,
+        if (!itemsInCart) {
+            const itemsInCart = {
+                id: supplies.id,
                 quantity: 1
             };
+            cart.push(itemsInCart);
+            console.log(itemsInCart);
+
+        } else {
+            itemsInCart.quantity++;
+            console.log(itemsInCart);
+            // else create new item object and initialize it to 1
             //add the newCartItem onto the cart object
-            cart.push(newCartItem);
         }
         //stringify the updated CART
         let updatedStringifiedCart = JSON.stringify(cart);
