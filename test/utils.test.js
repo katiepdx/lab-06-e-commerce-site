@@ -1,7 +1,7 @@
-import { findById } from '../common/utils.js';
+import { findById, calcLineItemTotal, calcOrderTotal } from '../common/utils.js';
 // hard-coded data for items in cart
 import { supplies } from '../data/supplies.js';
-import { calcLineItem } from '../common/utils.js';
+import { itemsInCart } from '../data/cart.js';
 
 const test = QUnit.test;
 
@@ -48,12 +48,18 @@ test('it should take in the cart qty and multiply it by catalog price to get ite
     const expectedTotalItemPrice = 8.97;
 
     //Act 
-    // returns total price after running calcLineItem function
-    const actual1 = calcLineItem(cartItemQuantity, catalogPrice);
+    // returns total price after running calcLineItemTotal function
+    const actual1 = calcLineItemTotal(cartItemQuantity, catalogPrice);
 
     //Assert
     assert.equal(expectedTotalItemPrice, actual1);
 });
 
 
+test('tests order total is correct', function(assert) {
+    const expectedTotal = 191.77;
 
+    const actual1 = calcOrderTotal(itemsInCart, supplies);
+
+    assert.equal(actual1, expectedTotal);
+});

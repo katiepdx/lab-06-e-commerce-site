@@ -1,4 +1,4 @@
-import { calcLineItem } from '../common/utils.js';
+import { calcLineItemTotal } from '../common/utils.js';
 
 export function renderLineItem(cartItem, catalogItem) {
     const tr = document.createElement('tr');
@@ -12,11 +12,13 @@ export function renderLineItem(cartItem, catalogItem) {
     tr.appendChild(itemQuantity);
 
     const itemPrice = document.createElement('td');
-    itemPrice.textContent = catalogItem.price;
+    itemPrice.textContent = `$${catalogItem.price}`;
     tr.appendChild(itemPrice);
 
     const totalPrice = document.createElement('td');
-    totalPrice.textContent = calcLineItem(cartItem.quantity, catalogItem.price);
+
+    const itemTotal = calcLineItemTotal(cartItem.quantity, catalogItem.price);
+    totalPrice.textContent = `$${itemTotal}`;
     tr.appendChild(totalPrice);
 
     return tr;
