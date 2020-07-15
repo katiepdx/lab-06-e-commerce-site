@@ -28,3 +28,16 @@ export function calcOrderTotal(itemsInCart, supplies) {
     }
     return Math.round(orderTotal * 100) / 100;
 }
+
+export function getCart(){
+    // retrieves CART from localStorage 
+    const rawCart = localStorage.getItem('CART');
+    let cart;
+
+    if (rawCart) {
+        cart = JSON.parse(rawCart);
+    } else {
+        cart = [];
+    }  
+    return cart;
+}

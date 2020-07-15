@@ -1,3 +1,5 @@
+import { getCart, findById } from '../common/utils.js';
+
 export function renderSupplies(supplies) {
     const li = document.createElement('li');
 
@@ -25,6 +27,34 @@ export function renderSupplies(supplies) {
     const button = document.createElement('button');
     button.value = supplies.id;
     button.textContent = 'Add to Cart';
+    //Add an event listener to the button 
+    button.addEventListener('click', () => {
+        //check if button works and gets item id for the item button clicked
+        let cart = getCart();
+
+        //getting the id for each item in cart
+        let itemsInCart = findById(cart, supplies.id);
+
+        //if cart item exists at 1 to quantity
+        if (itemsInCart) {
+            itemsInCart.quantity++;
+            
+        } else {
+            // else create new item object and initialize it to 1
+            const newCartItem = {
+                id: cart.id,
+                quantity: 1
+            };
+            //add the newCartItem onto the cart object
+            cart.push(newCartItem);
+        }
+        //stringify the updated CART
+        let updatedStringifiedCart = JSON.stringify(cart);
+
+        //add it back into localStorage 
+        localStorage.setItem('UPDATED CART', updatedStringifiedCart);
+    });
+
     li.appendChild(button);
 
     return li;

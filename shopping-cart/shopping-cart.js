@@ -1,12 +1,13 @@
-import { itemsInCart } from '../data/cart.js';
 import { supplies } from '../data/supplies.js';
-import { findById, calcOrderTotal } from '../common/utils.js';
+import { findById, calcOrderTotal, getCart } from '../common/utils.js';
 import { renderLineItem } from '../shopping-cart/render-line-item.js';
 
 // Items in cart list will go here
 const tbody = document.querySelector('tbody');
 // Order total goes here 
 const orderTotalCell = document.getElementById('order-total');
+
+let itemsInCart = getCart();
 
 // loop through the cart item data
 for (let i = 0; i < itemsInCart.length; i++) {
