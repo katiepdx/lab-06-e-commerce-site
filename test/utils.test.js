@@ -1,6 +1,6 @@
 import { findById, calcLineItemTotal, calcOrderTotal } from '../common/utils.js';
-// hard-coded data for items in cart
 import { supplies } from '../data/supplies.js';
+// hard-coded data for items in cart
 import { itemsInCart } from '../data/cart.js';
 
 const test = QUnit.test;

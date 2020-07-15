@@ -11,7 +11,7 @@ test('renders a line item for supplies', function(assert) {
         quantity: 3
     };
     const spiralNotebook = findById(supplies, cartItem.id);
-    const expected = '<tr><th>Spiral Notebook</th><td>3</td><td>2.99</td><td>8.97</td></tr>';
+    const expected = '<tr><th>Spiral Notebook</th><td>3</td><td>$2.99</td><td>$8.97</td></tr>';
 
     // act
     const dom = renderLineItem(cartItem, spiralNotebook);
