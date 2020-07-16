@@ -34,3 +34,7 @@ button {
 button:hover {
     background-color: gold;
 }
+
+.hidden {
+    display: none;
+}

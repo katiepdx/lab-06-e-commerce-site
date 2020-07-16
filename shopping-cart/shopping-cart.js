@@ -6,6 +6,8 @@ import { renderLineItem } from '../shopping-cart/render-line-item.js';
 const tbody = document.querySelector('tbody');
 // Order total goes here 
 const orderTotalCell = document.getElementById('order-total');
+// Get order button 
+const orderButton = document.getElementById('place-order-button');
 
 let itemsInCart = getCart();
 
@@ -20,3 +22,7 @@ for (let i = 0; i < itemsInCart.length; i++) {
 
 const orderTotal = calcOrderTotal(itemsInCart, supplies);
 orderTotalCell.textContent = `$${orderTotal}`;
+
+if (orderTotal === 0) {
+    orderButton.classList.add('hidden');
+}
