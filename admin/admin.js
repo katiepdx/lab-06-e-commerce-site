@@ -1,4 +1,4 @@
-import { supplies } from '../data/supplies.js';
+import { getCurrentCatalogItems } from '../common/utils.js';
 
 // Get DOM elements 
 // get the form 
@@ -22,8 +22,11 @@ inputForm.addEventListener('submit', (e) => {
         price: Number(completedForm.get('price')),
     };
 
-    const currentCatalogItems = supplies;
+    const currentCatalogItems = getCurrentCatalogItems();
     currentCatalogItems.push(adminsNewItem);
-    //check new item is pushed to currentCatalogItems
-    console.log(currentCatalogItems);
+
+    //stringify currentCatalogItems (incl. adminsNewItem)
+    const storedCurrentCatalogItems = JSON.stringify(currentCatalogItems);
+    //set stringy currentCatalogItems to local storage as the value to 'CURRENT CATALOG'
+    localStorage.setItem('CURRENT CATALOG', storedCurrentCatalogItems);
 });
