@@ -52,7 +52,7 @@ export function getCurrentCatalogItems(){
         //seed the catalog with starter items in local storage 
         localStorage.setItem('CURRENT CATALOG', JSON.stringify(supplies));
 
-        //now set items to be the starter fruits in local storage 
+        //now set items to be the starter items in local storage 
         rawCurrentCatalog = JSON.parse(localStorage.getItem('CURRENT CATALOG'));
     }
     return rawCurrentCatalog;

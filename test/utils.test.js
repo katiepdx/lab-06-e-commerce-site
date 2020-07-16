@@ -1,4 +1,7 @@
-import { findById, calcLineItemTotal, calcOrderTotal } from '../common/utils.js';
+import { 
+    findById, 
+    calcLineItemTotal, 
+    calcOrderTotal } from '../common/utils.js';
 import { supplies } from '../data/supplies.js';
 // hard-coded data for items in cart
 import { itemsInCart } from '../data/cart.js';
