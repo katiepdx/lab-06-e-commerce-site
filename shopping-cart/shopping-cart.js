@@ -24,7 +24,7 @@ const orderTotal = calcOrderTotal(itemsInCart, supplies);
 orderTotalCell.textContent = `$${orderTotal}`;
 
 if (orderTotal === 0) {
-    orderButton.classList.add('hidden');
+    orderButton.disabled = true;
 }
 
 // Place order alert 
