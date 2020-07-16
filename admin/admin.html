@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="./products.css">
-    <title>Teacher Tool Kit</title>
+    <link rel="stylesheet" href="./admin.css">
+    <title>Admin</title>
 </head>
 
 <body>
@@ -27,24 +27,48 @@
         </a>
         <a href="../admin/admin.html">
             <div class="admin-page-button">
-                Admin  
+                Admin
             </div>
         </a>
     </header>
     <main>
         <section>
             <h2>
-                Products Page
+                Admin Page
             </h2>
 
             <content>
             <p class="sub-heading">
-                New Arrivals!
+                Add a New Item!
             </p>
             <hr />
             <p>
-                <!-- List of products will go here -->
-                <ul id="supplies"></ul>
+                <!-- add a product form goes here -->
+                <form id="new-fruit-form">
+                    <label>
+                        Id
+                        <input name="id" />
+                    </label>
+                    <label>
+                        Name
+                        <input name="name" />
+                    </label>
+                    <label>
+                        Description
+                        <input name="description" />
+                    </label>
+                    <label>
+                        Image
+                        <input name="image" />
+                    </label>
+                    <label>
+                        Price
+                        <input name="price" />
+                    </label>
+                    <button>
+                        Submit
+                    </button>
+                </form>
             </p>
 
         </section>
