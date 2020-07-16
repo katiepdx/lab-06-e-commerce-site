@@ -29,4 +29,10 @@ inputForm.addEventListener('submit', (e) => {
     const storedCurrentCatalogItems = JSON.stringify(currentCatalogItems);
     //set stringy currentCatalogItems to local storage as the value to 'CURRENT CATALOG'
     localStorage.setItem('CURRENT CATALOG', storedCurrentCatalogItems);
+
+    //alert user of successful item add 
+    alert(`You have successfully added ${adminsNewItem.name} to the catalog`);
+
+    //refresh to admin page after submitting 
+    window.location = './admin.html';
 });
