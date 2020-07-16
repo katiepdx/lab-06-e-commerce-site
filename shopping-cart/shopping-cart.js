@@ -26,3 +26,13 @@ orderTotalCell.textContent = `$${orderTotal}`;
 if (orderTotal === 0) {
     orderButton.classList.add('hidden');
 }
+
+// Place order alert 
+orderButton.addEventListener('click', () => {
+    //removes items from cart in localStorage
+    localStorage.removeItem('UPDATED CART');
+    // alerts user of items in the cart
+    alert(JSON.stringify(itemsInCart, true, 2));
+    // redirects user back to homepage
+    window.location = '../';
+});
