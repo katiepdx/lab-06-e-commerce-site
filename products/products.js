@@ -6,7 +6,6 @@ const displayNewProducts = document.getElementById('supplies');
 
 const currentCatalog = getCurrentCatalogItems();
 
-
 for (let i = 0; i < currentCatalog.length; i++) {
     const suppliesList = currentCatalog[i];
     const displayInDOM = renderSupplies(suppliesList);

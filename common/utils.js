@@ -1,11 +1,11 @@
 import { supplies } from '../data/supplies.js';
 
-export function findById(catalogItem, cartItemId) {
+export function findById(catalogItems, cartItemId) {
     //Initialize item
     let itemMatch;
-    for (let i = 0; i < catalogItem.length; i++) {
-        if (cartItemId === catalogItem[i].id) {
-            itemMatch = catalogItem[i];
+    for (let i = 0; i < catalogItems.length; i++) {
+        if (cartItemId === catalogItems[i].id) {
+            itemMatch = catalogItems[i];
             return itemMatch;
         }
     }
